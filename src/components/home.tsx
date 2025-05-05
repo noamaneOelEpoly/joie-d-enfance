@@ -50,7 +50,7 @@ const HomePage = () => {
       id: "contact",
       title: "Contact",
       description:
-        "We would love to hear from you! Reach out to learn more about our organization, how you can get involved, or to schedule a visit to our facilities. Email: noamane.ouldelabbar@e-polytechnique.ma | Phone: +212700902021 | Address: Bab Al Madina, Qr Tilila, B.P. 8143, Agadir",
+        "We would love to hear from you! Reach out to learn more about our organization, how you can get involved, or to schedule a visit to our facilities.",
       imageUrl: "https://i.ibb.co/Q3ts9dBT/pexels-pixabay-220455.jpg",
       content: (
         <div>
@@ -64,7 +64,7 @@ const HomePage = () => {
     },
   ];
   return (
-    <div className="min-h-screen bg-white">
+    <div className="h-full w-full">
       <Navbar />
       <HeroSection onDonateClick={handleOpenDonationForm} />
 

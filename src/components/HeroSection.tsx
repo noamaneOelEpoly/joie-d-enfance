@@ -21,19 +21,20 @@ const HeroSection = ({
   const videoId = videoUrl.split("/").pop() || "tenmwd";
 
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-gray-900">
+    <div className="relative h-screen w-full overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full">
-        <div className="relative w-full h-full">
-          <iframe
-            src={`https://streamable.com/e/${videoId}?autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0&background=1`}
-            allow="autoplay; fullscreen"
-            className="absolute w-full h-full object-cover"
-            title="Background Video"
-          />
-          {/* Semi-transparent overlay */}
-          <div className="absolute inset-0 bg-blue-900/40"></div>
-        </div>
+        <iframe
+          src={`https://streamable.com/e/${videoId}?autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0&background=1`}
+          allow="autoplay; fullscreen"
+          allowFullScreen
+          frameBorder="0"
+          className="absolute inset-0 w-full h-full min-w-full min-h-full scale-[1.2]"
+          title="Background Video"
+        ></iframe>
+
+        {/* Semi-transparent overlay */}
+        <div className="absolute inset-0 bg-blue-900/40"></div>
       </div>
 
       {/* Content */}
